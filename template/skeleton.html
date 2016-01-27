@@ -1,0 +1,39 @@
+{% set version = 3 %}
+<!doctype html>
+<html id="page-{{ pageid }}">
+	<head>
+		{% block head %}
+		<title>{{ pagetitle }} - Gravitycon</title>
+		<!--<meta name="description" content="{% block pagedesc %}{% endblock %}">-->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="style-v{{ version }}.css" type="text/css">
+		<script defer src="app-v{{ version }}.js" type="text/javascript"></script>
+		{% endblock %}
+	</head>
+	<body>
+		{% block nav %}
+		<nav class="main-menu {% if pagebackgroundisbright %}main-menu--dark-back{% endif %}">
+			<a href="/"><img class="main-menu__logo" src="img/logo.png"></a>
+			<ul class="main-menu__buttons">
+				<li class="main-menu__buttons-item"><a href="reg.html">РЕГИСТРАЦИЯ</a></li>
+				<li class="main-menu__buttons-item"><a href="news.html">НОВОСТИ</a></li>
+				<li class="main-menu__buttons-item"><a href="rules.html">ПРАВИЛА</a></li>
+				<li class="main-menu__buttons-item"><a href="schedule.html">ПРОГРАММА</a></li>
+				<li class="main-menu__buttons-item"><a href="contacts.html">КОНТАКТЫ</a></li>
+			</ul>
+		</nav>
+		{% endblock %}
+		{% block pagecontent %}
+		<div class="page-content">
+			{% block mainpanel %}
+			<div class="page-content__main-panel">
+				<h1 class="page-content__main-panel-title">{{ mainpaneltitle }}</h1>
+				{% block main %}{% endblock %}
+			</div>
+			{% endblock %}
+		</div>
+		{% endblock %}
+	</body>
+</html>

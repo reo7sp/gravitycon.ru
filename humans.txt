@@ -1,0 +1,7 @@
+/* TEAM */
+
+Web developer: Oleg Morozenkov
+Site: http://reo7sp.ru
+
+/* SITE */
+Language: Russian

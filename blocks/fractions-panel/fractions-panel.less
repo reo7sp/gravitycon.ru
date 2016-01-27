@@ -1,0 +1,43 @@
+.fractions-panel {
+	&__title {
+		text-align: center;
+		font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+		font-size: 1.5em;
+		margin-bottom: 1.5em;
+	}
+
+	&__item {
+		&:hover {
+			cursor: pointer;
+		}
+
+		&-image {
+			width: 100%;
+			height: auto;
+			transition: all 0.2s ease-in-out;
+
+			&:hover {
+				transform: scale(1.1);
+				cursor: pointer;
+			}
+
+			&--stan:hover {
+				filter: drop-shadow(0 4px 8px rgb(234, 232, 52));
+			}
+
+			&--dipper:hover {
+				filter: drop-shadow(0 4px 8px rgb(57, 98, 197));
+			}
+
+			&--mabel:hover {
+				filter: drop-shadow(0 4px 8px rgb(216, 41, 97));
+			}
+		}
+
+		&-text {
+			text-align: center;
+			font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+			font-size: 1.25em;
+		}
+	}
+}
